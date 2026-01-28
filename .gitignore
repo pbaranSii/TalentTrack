@@ -1,0 +1,21 @@
+# Node / TypeScript / frontend (na przyszłość)
+node_modules/
+dist/
+build/
+.turbo/
+.next/
+coverage/
+
+# Systemowe / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logi i tymczasowe
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+temp/
