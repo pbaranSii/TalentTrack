@@ -1,0 +1,333 @@
+/* Layout w stylu Cursor Docs – ciemny header, jasna treść, czytelna prezentacja */
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+/* Nagłówek – ciemny, pełna szerokość */
+.app-header {
+  background-color: #0a0a0a;
+  color: #fafafa;
+  border-bottom: 1px solid #262626;
+}
+
+.app-header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.875rem 1.5rem;
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a3a3a3;
+  font-size: 0.75rem;
+}
+
+.app-user-label {
+  color: #fafafa;
+  font-weight: 500;
+}
+
+.app-user-role {
+  border: 1px solid #404040;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  color: #a3a3a3;
+}
+
+.app-logo {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.app-nav a {
+  font-size: 0.875rem;
+  color: #a3a3a3;
+  transition: color 0.15s ease;
+}
+
+.app-nav a:hover {
+  color: #fafafa;
+}
+
+.theme-toggle {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #404040;
+  background-color: transparent;
+  color: #a3a3a3;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #262626;
+  color: #fafafa;
+}
+
+/* Główna treść – ograniczona szerokość, duży padding */
+.app-main {
+  flex: 1;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  width: 100%;
+}
+
+/* Sekcje stron – jak bloki w dokumentacji */
+.page-section {
+  margin-bottom: 2rem;
+}
+
+.page-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #262626;
+  margin: 0 0 0.5rem 0;
+}
+
+.page-section-desc {
+  font-size: 0.875rem;
+  color: #525252;
+  margin: 0 0 1rem 0;
+}
+
+/* Tabele – czytelne, z obramowaniem jak w Cursor Docs */
+.docs-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  margin-top: 1rem;
+}
+
+.docs-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.docs-table th,
+.docs-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+  color: #262626;
+}
+
+.docs-table th {
+  font-weight: 600;
+  background-color: #fafafa;
+  color: #0a0a0a;
+}
+
+.docs-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.docs-table tbody tr:hover td {
+  background-color: #fafafa;
+}
+
+/* Przyciski – stonowane, w stylu docs */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #d71920;
+  border: 1px solid #d71920;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b8141a;
+  border-color: #b8141a;
+  color: #fff;
+}
+
+/* Primary button links: white text (override .docs-content a) */
+a.btn-primary {
+  color: rgba(255, 255, 255, 1);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #525252;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.btn-secondary:hover {
+  background-color: #fafafa;
+  border-color: #d4d4d4;
+  color: #262626;
+}
+
+/* Karty / boksy (formularze, błędy) */
+.docs-card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.docs-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin: 0 0 0.25rem 0;
+}
+
+.docs-card-desc {
+  font-size: 0.875rem;
+  color: #525252;
+  margin: 0 0 1rem 0;
+}
+
+/* Komunikat błędu – czytelny, w stylu docs */
+.docs-alert-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  color: #991b1b;
+}
+
+.docs-alert-error .docs-alert-title {
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.docs-alert-error .docs-alert-body {
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Link „powrót” */
+.docs-back-link {
+  font-size: 0.875rem;
+  color: #525252;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.docs-back-link:hover {
+  color: #2563eb;
+}
+
+/* Stan ładowania */
+.docs-loading {
+  font-size: 0.875rem;
+  color: #737373;
+}
+
+/* Pola formularza – styl docs */
+.docs-form-group {
+  margin-bottom: 1rem;
+}
+
+.docs-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 0.375rem;
+}
+
+.docs-form-input,
+.docs-form-select,
+.docs-form-textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  color: #171717;
+}
+
+.docs-form-input:focus,
+.docs-form-select:focus,
+.docs-form-textarea:focus {
+  outline: none;
+  border-color: #d71920;
+  box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.15);
+}
+
+.docs-form-error {
+  font-size: 0.75rem;
+  color: #b91c1c;
+  margin-top: 0.25rem;
+}
+
+.docs-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (max-width: 640px) {
+  .app-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+  }
+
+  .app-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .app-main {
+    padding: 1.5rem 1rem 2rem;
+  }
+}
